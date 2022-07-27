@@ -13,9 +13,9 @@ import {
   SafeAreaView,
   StyleSheet,
 } from 'react-native';
-import Colors from './src/styles/Theme';
+import Colors from './styles/Theme';
 
-import AppBar from './src/components/AppBar';
+import AppBar from './components/AppBar';
 
 const App = () => {
 

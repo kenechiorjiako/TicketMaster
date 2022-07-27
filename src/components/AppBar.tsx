@@ -2,7 +2,7 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Colors from '../styles/Theme';
 import Svg, {SvgXml} from 'react-native-svg';
-import SvgImage from '.src/assets/svgs/LogoWhite.svg';
+import Logo from './assets/LogoWhite.svg';
 
 const AppBar = () => {
   const styles = StyleSheet.create({
@@ -18,7 +18,11 @@ const AppBar = () => {
     },
   });
 
-  return <View style={styles.appBar}> <SvgImage></SvgImage></View>;
+  return (
+    <View style={styles.appBar}>
+      <Logo width={120} height={40} fill={'any color'} />
+    </View>
+  );
 };
 
 export default AppBar;
