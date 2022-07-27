@@ -42,7 +42,7 @@ const AppBar = () => {
     })
 
     return (
-        <View style = {styles.prodWrap}>
+        <View style = {styles.prodWrap} >
                 <Icon ='arrow-back' size={20} style={{ marginRight: 0 }} onPress={() => {}} />
                 <View style={styles.prodText}>
                     <Text numberOfLines={1} style={styles.headerFont}>{data.title}</Text>
