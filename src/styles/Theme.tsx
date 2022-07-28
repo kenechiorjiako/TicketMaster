@@ -5,10 +5,14 @@ export const Colors = {
   white: '#fff',
   black: '#000',
   gray: '#74858C',
+  separator: '#E7E7E7',
 };
 
 export const Sizes = {
-    sideBorder: 16
+    sideBorder: 16,
+    marginSmall: 4,
+    marginMedium: 10,
+    marginLarge: 20
 }
 
 export const Font = {

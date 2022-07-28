@@ -16,7 +16,6 @@ const AppBar = () => {
       justifyContent: 'space-between',
       alignItems: 'center',
       backgroundColor: Colors.background,
-      marginBottom: 12,
       ...Shadows.light
     },
   });

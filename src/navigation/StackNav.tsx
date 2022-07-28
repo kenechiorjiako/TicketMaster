@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 const StackNav = () => {
     return (
-      <Stack.Navigator screenOptions={{
+      <Stack.Navigator initialRouteName="Splash" screenOptions={{
         headerShown: false
       }}> 
         <Stack.Screen name="Splash" component={SplashScreen} />
