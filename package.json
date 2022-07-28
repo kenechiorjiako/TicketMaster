@@ -10,11 +10,12 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@klarna/react-native-vector-drawable": "^0.4.0",
     "@reduxjs/toolkit": "^1.8.3",
     "react": "18.0.0",
     "react-native": "0.69.2",
-    "react-native-vector-image": "^0.3.3"
+    "react-native-linear-gradient": "^2.6.2",
+    "react-native-svg": "^12.4.3",
+    "react-native-svg-transformer": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

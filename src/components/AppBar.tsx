@@ -1,53 +1,32 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
-import VectorImage from 'react-native-vector-image'
-import React from 'react'
+import {Image, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {Colors, Sizes, Shadows} from '../styles/Theme';
+import Logo from '../assets/svgs/Logo.svg';
+import LocationButton from './LocationButton';
 
 
 const AppBar = () => {
+  const styles = StyleSheet.create({
+    appBar: {
+      width: '100%',
+      height: 64,
+      paddingHorizontal: Sizes.sideBorder,
+      flexDirection: 'row',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      backgroundColor: Colors.background,
+      marginBottom: 12,
+      ...Shadows.light
+    },
+  });
 
-    const styles = StyleSheet.create({
-        prodWrap: {
-            width: '93%',
-            alignSelf: 'center',
-            height: '8%',
-            flexDirection: 'row',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-        },
-        prodText: {
-            width: '85%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-        },
-        headerWrap: {
-            width: '93%',
-            alignSelf: 'center',
-            height: '8%',
-            flexDirection: 'row',
-            display: 'flex',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-        },
-        headerText: {
-            width: '80%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-        },
-        headerFont: {
-            fontSize: 16
-        }
-    })
+  return (
+    <View style={styles.appBar}>
+      <Logo height={150} fill={Colors.primary} />
+      <LocationButton location='NY'/>
+    </View>
+  );
+};
 
-    return (
-        <View style = {styles.prodWrap}>
-                <Icon ='arrow-back' size={20} style={{ marginRight: 0 }} onPress={() => {}} />
-                <View style={styles.prodText}>
-                    <Text numberOfLines={1} style={styles.headerFont}>{data.title}</Text>
-                </View>
-            </View>
-    )
-}
-
+export default AppBar;

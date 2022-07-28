@@ -12,8 +12,17 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2C2C6A5334DD4BD58B395B9C /* THICCCBOI-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 340591AC3E334E669CDD3D91 /* THICCCBOI-SemiBold.ttf */; };
+		332E0B8D7D4C4A4F9CB50FDD /* THICCCBOI-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13AD8C0B8B974FE0A1BC7C11 /* THICCCBOI-Bold.ttf */; };
+		454AA8C2CBEB41C89B3ADFC2 /* THICCCBOI-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6472E7C36BA94A89BF1FE4C1 /* THICCCBOI-Black.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-TicketMaster-TicketMasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TicketMaster-TicketMasterTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		95B05B38179F4DBA9CF4CD66 /* THICCCBOI-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB20A43864934E619644E6CC /* THICCCBOI-Medium.ttf */; };
+		A3D293688B1448F79806ECA3 /* THICCCBOI-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FC38FEC3211438F81D0FDC0 /* THICCCBOI-Regular.ttf */; };
+		AA3D546F39314768BDBD5273 /* THICCCBOI-ThicccAF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EBF58C9A51C4954A703FF04 /* THICCCBOI-ThicccAF.ttf */; };
+		D67E332615834300870459E2 /* THICCCBOI-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46165D98AE064075A6DA61B7 /* THICCCBOI-Thin.ttf */; };
+		E30B351EA7704FC9B04C2679 /* THICCCBOI-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9FA873CFA5E45AE9DD4B85A /* THICCCBOI-Light.ttf */; };
+		E9C2412AAB7C4656AA829F53 /* THICCCBOI-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3D48EBA2504ED4A2BF4A0D /* THICCCBOI-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +39,8 @@
 		00E356EE1AD99517003FC87E /* TicketMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TicketMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketMasterTests.m; sourceTree = "<group>"; };
+		0FC38FEC3211438F81D0FDC0 /* THICCCBOI-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-Regular.ttf"; path = "../src/assets/fonts/THICCCBOI-Regular.ttf"; sourceTree = "<group>"; };
+		13AD8C0B8B974FE0A1BC7C11 /* THICCCBOI-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-Bold.ttf"; path = "../src/assets/fonts/THICCCBOI-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TicketMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TicketMaster/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = TicketMaster/AppDelegate.mm; sourceTree = "<group>"; };
@@ -37,13 +48,20 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TicketMaster/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TicketMaster/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TicketMaster-TicketMasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TicketMaster-TicketMasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		340591AC3E334E669CDD3D91 /* THICCCBOI-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-SemiBold.ttf"; path = "../src/assets/fonts/THICCCBOI-SemiBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-TicketMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMaster.debug.xcconfig"; path = "Target Support Files/Pods-TicketMaster/Pods-TicketMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		46165D98AE064075A6DA61B7 /* THICCCBOI-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-Thin.ttf"; path = "../src/assets/fonts/THICCCBOI-Thin.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-TicketMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMaster.release.xcconfig"; path = "Target Support Files/Pods-TicketMaster/Pods-TicketMaster.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-TicketMaster-TicketMasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMaster-TicketMasterTests.debug.xcconfig"; path = "Target Support Files/Pods-TicketMaster-TicketMasterTests/Pods-TicketMaster-TicketMasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-TicketMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TicketMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6472E7C36BA94A89BF1FE4C1 /* THICCCBOI-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-Black.ttf"; path = "../src/assets/fonts/THICCCBOI-Black.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TicketMaster/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-TicketMaster-TicketMasterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMaster-TicketMasterTests.release.xcconfig"; path = "Target Support Files/Pods-TicketMaster-TicketMasterTests/Pods-TicketMaster-TicketMasterTests.release.xcconfig"; sourceTree = "<group>"; };
+		9EBF58C9A51C4954A703FF04 /* THICCCBOI-ThicccAF.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-ThicccAF.ttf"; path = "../src/assets/fonts/THICCCBOI-ThicccAF.ttf"; sourceTree = "<group>"; };
+		E9FA873CFA5E45AE9DD4B85A /* THICCCBOI-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-Light.ttf"; path = "../src/assets/fonts/THICCCBOI-Light.ttf"; sourceTree = "<group>"; };
+		EB20A43864934E619644E6CC /* THICCCBOI-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-Medium.ttf"; path = "../src/assets/fonts/THICCCBOI-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FD3D48EBA2504ED4A2BF4A0D /* THICCCBOI-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "THICCCBOI-ExtraBold.ttf"; path = "../src/assets/fonts/THICCCBOI-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +124,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2E44993254AD475AA92B797D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6472E7C36BA94A89BF1FE4C1 /* THICCCBOI-Black.ttf */,
+				13AD8C0B8B974FE0A1BC7C11 /* THICCCBOI-Bold.ttf */,
+				FD3D48EBA2504ED4A2BF4A0D /* THICCCBOI-ExtraBold.ttf */,
+				E9FA873CFA5E45AE9DD4B85A /* THICCCBOI-Light.ttf */,
+				EB20A43864934E619644E6CC /* THICCCBOI-Medium.ttf */,
+				0FC38FEC3211438F81D0FDC0 /* THICCCBOI-Regular.ttf */,
+				340591AC3E334E669CDD3D91 /* THICCCBOI-SemiBold.ttf */,
+				9EBF58C9A51C4954A703FF04 /* THICCCBOI-ThicccAF.ttf */,
+				46165D98AE064075A6DA61B7 /* THICCCBOI-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +157,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2E44993254AD475AA92B797D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +280,15 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				454AA8C2CBEB41C89B3ADFC2 /* THICCCBOI-Black.ttf in Resources */,
+				332E0B8D7D4C4A4F9CB50FDD /* THICCCBOI-Bold.ttf in Resources */,
+				E9C2412AAB7C4656AA829F53 /* THICCCBOI-ExtraBold.ttf in Resources */,
+				E30B351EA7704FC9B04C2679 /* THICCCBOI-Light.ttf in Resources */,
+				95B05B38179F4DBA9CF4CD66 /* THICCCBOI-Medium.ttf in Resources */,
+				A3D293688B1448F79806ECA3 /* THICCCBOI-Regular.ttf in Resources */,
+				2C2C6A5334DD4BD58B395B9C /* THICCCBOI-SemiBold.ttf in Resources */,
+				AA3D546F39314768BDBD5273 /* THICCCBOI-ThicccAF.ttf in Resources */,
+				D67E332615834300870459E2 /* THICCCBOI-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +297,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -264,7 +309,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\nREACT_NATIVE_SVG_IMAGE\"../node_modules/react-native-vector-image/strip_svgs.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE $REACT_NATIVE_SVG_IMAGE\"\n";
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
 		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
