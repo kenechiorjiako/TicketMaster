@@ -17,14 +17,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
     marginEnd: 3,
   },
   text: {
     fontFamily: Font.medium,
     marginStart: 3,
-    fontSize: 13.5,
+    fontSize: 12,
   },
 });
 

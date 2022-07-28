@@ -20,8 +20,8 @@ const SearchBar = () => {
       locations={[0, 0.7, 1]}
       colors={[
         'rgba(245, 245, 245, 1)',
-        'rgba(239, 239, 239, 0.3)',
-        'rgba(255, 255, 255, 0)',
+        'rgba(245, 245, 245, 0.3)',
+        'rgba(255, 245, 245, 0)',
       ]}
       style={styles.searchBar}>
       <SearchIcon width={20} height={20} fill={Colors.primary} />
@@ -33,8 +33,6 @@ const SearchBar = () => {
 
 const styles = StyleSheet.create({
   searchBar: {
-    marginHorizontal: Sizes.sideBorder,
-    marginTop: 20,
     paddingStart: 16,
     paddingVertical: 4,
     borderRadius: 300,
@@ -44,17 +42,18 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: Font.semiBold,
-    fontSize: 14,
+    fontSize: 12,
     color: Colors.white,
   },
   searchIcon: {
-    width: 20,
-    height: 20,
+    width: 22,
+    height: 22,
     marginEnd: 12,
     flexShrink: 0,
   },
   textInput: {
     margin: 12,
+    fontSize: 14,
     fontFamily: Font.regular,
     flexGrow: 1,
     flexShrink: 1,
