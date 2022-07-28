@@ -24,22 +24,24 @@ const styles = StyleSheet.create({
   container: {
     width: 'auto',
     backgroundColor: Colors.white,
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
   textLayout: {
+    marginStart: 12,
+    height: 50,
     flexDirection: 'column',
+    flex: 1,
   },
   title: {
-    fontSize: 15,
+    fontSize: 14,
     fontFamily: Font.bold,
-  },
+  }
 });
 
-
-const LargeEventItem: React.FC<EventItemProp> = ({data}) => {
+const SmallEventItem: React.FC<EventItemProp> = ({data}) => {
   const {height, width} = useWindowDimensions();
 
-  let calculatedWidth = (width - Sizes.sideBorder * 3);
+  let calculatedWidth = (width - Sizes.sideBorder * 2) * 0.3;
   let calculatedHeight = (calculatedWidth * 9) / 16;
 
   return (
@@ -52,8 +54,6 @@ const LargeEventItem: React.FC<EventItemProp> = ({data}) => {
         }}
         source={require('../../assets/images/eventImage.jpeg')}
       />
-
-      <Spacer height={12}/>
 
       <View style={styles.textLayout}>
         <Text style={styles.title} numberOfLines={1}>
@@ -76,4 +76,8 @@ const LargeEventItem: React.FC<EventItemProp> = ({data}) => {
   );
 };
 
-export default LargeEventItem;
+
+
+
+
+export default SmallEventItem;
