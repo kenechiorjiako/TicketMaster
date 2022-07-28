@@ -6,7 +6,7 @@ import {Colors} from '../styles/Theme';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={{backgroundColor: Colors.background}}>
+    <SafeAreaView style={styles.screen}>
       <View>
         <AppBar />
         <SearchBar />
@@ -15,6 +15,11 @@ const HomeScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: Colors.background
+  }
+});
 
 export default HomeScreen;

@@ -1,11 +1,14 @@
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import SplashScreen from './features/SplashScreen';
+import {StyleSheet, Text} from 'react-native';
+import StackNav from './navigation/StackNav';
 
 const App = () => {
-
   return (
-    <SplashScreen/>
+    <NavigationContainer>
+      <StackNav />
+    </NavigationContainer>
   );
 };
 
