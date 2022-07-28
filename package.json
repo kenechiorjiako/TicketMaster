@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^1.8.3",
     "react": "18.0.0",
     "react-native": "0.69.2",
+    "react-native-linear-gradient": "^2.6.2",
     "react-native-svg": "^12.4.3",
     "react-native-svg-transformer": "^1.0.0"
   },

@@ -1,40 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-} from 'react-native';
-import Colors from './styles/Theme';
-
-import AppBar from './components/AppBar';
+import {StyleSheet} from 'react-native';
+import SplashScreen from './features/SplashScreen';
 
 const App = () => {
 
-  const backgroundStyle = {
-    backgroundColor: Colors.white,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <AppBar/> 
-    </SafeAreaView>
+    <SplashScreen/>
   );
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  }
-});
+const styles = StyleSheet.create({});
 
 export default App;

@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/THICCCBOI-Black.ttf",
+      "sha1": "d88ca41511c8e481185fd834a1a0d1aab790027f"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-Bold.ttf",
+      "sha1": "a360eccd2c5f17d8df2b0d800872a03df6e28df1"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-ExtraBold.ttf",
+      "sha1": "e59073a8871c201bacd7efc20b4fe4216d8e0f7f"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-Light.ttf",
+      "sha1": "c6e54578eb58142e64d1a7620bb3a1024d031779"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-Medium.ttf",
+      "sha1": "c3ceed2b8655bbc2840bb3924dc46f48cc386d19"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-Regular.ttf",
+      "sha1": "bc6e56038d3555da22ee53c58743cca0a40aa883"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-SemiBold.ttf",
+      "sha1": "40c87fc4b8b613bce6de38eb8dd05627b2755e18"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-ThicccAF.ttf",
+      "sha1": "f9cbb2e6d7874c5bec5fb67ed3b0ef499035dd5e"
+    },
+    {
+      "path": "src/assets/fonts/THICCCBOI-Thin.ttf",
+      "sha1": "b185e93b103519624ebc19512abe0e2c4f00c421"
+    }
+  ]
+}
