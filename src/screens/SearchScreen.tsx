@@ -54,6 +54,9 @@ const SearchScreen = ({route, navigation}: Props) => {
   const [currentSearch, setCurrentSearch] = useState(route.params.query);
 
   function search(text: string) {
+    if (!text) {
+      return;
+    }
     const formatted = text.trim();
     if (formatted.length != 0) {
       setCurrentSearch(formatted);

@@ -73,6 +73,9 @@ const HomeScreen = ({navigation}: Props) => {
   const {width, height} = useWindowDimensions();
 
   function search(text: string) {
+    if (!text) {
+      return;
+    }
     const formatted = text.trim();
     if (formatted.length != 0) {
       navigation.navigate('Search', {query: formatted});
