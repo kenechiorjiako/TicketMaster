@@ -1,9 +1,10 @@
 import React from 'react';
-import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
-import {Colors, Font, Shadows} from '../styles/Theme';
+import {Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {Colors, Font} from '../styles/Theme';
 
 export type Props = {
   location: string;
+  onPress?: () => void
 };
 
 const styles = StyleSheet.create({
@@ -28,9 +29,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const LocationButton: React.FC<Props> = ({location}) => {
+const LocationButton: React.FC<Props> = ({location, onPress}) => {
   return (
-    <TouchableOpacity activeOpacity={0.5} style={styles.button}>
+    <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={onPress}>
       <Image
         style={styles.icon}
         source={require('../assets/images/location.png')}

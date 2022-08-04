@@ -1,18 +1,30 @@
-import React from 'react';
-import {StyleSheet, TextInput, View, Text, Button, Image, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {
+  StyleSheet,
+  TextInput,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import {Colors, Font, Shadows, Sizes} from '../styles/Theme';
 import LinearGradient from 'react-native-linear-gradient';
 import SearchIcon from '../assets/svgs/searchIcon.svg';
 
-const SearchButton = () => {
+const SearchButton = ({onSearch}: any) => {
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.button}>
-        <Text style={styles.buttonText}>Search</Text>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={styles.button}
+      onPress={() => {
+        onSearch();
+      }}>
+      <Text style={styles.buttonText}>Search</Text>
     </TouchableOpacity>
   );
 };
 
-const SearchBar = () => {
+const SearchBar = ({onSearch, defaultText}: any) => {
+  const [text, onChangeText] = useState(defaultText);
+
   return (
     <LinearGradient
       start={{x: 0.0, y: 0}}
@@ -25,8 +37,19 @@ const SearchBar = () => {
       ]}
       style={styles.searchBar}>
       <SearchIcon width={20} height={20} fill={Colors.primary} />
-      <TextInput style={styles.textInput} placeholder="Search events" />
-      <SearchButton />
+      <TextInput
+        style={styles.textInput}
+        onChangeText={text => {
+          onChangeText(text)
+        }}
+        placeholder="Search events"
+        value={text}
+      />
+      <SearchButton
+        onSearch={() => {
+          onSearch(text);
+        }}
+      />
     </LinearGradient>
   );
 };
@@ -65,7 +88,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 22,
     paddingVertical: 12,
     flexShrink: 0,
-    ...Shadows.searchButton
+    ...Shadows.searchButton,
   },
 });
 

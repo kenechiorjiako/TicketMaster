@@ -5,13 +5,17 @@ export type SpacerProps = {
   width?: number;
   height?: number;
   color?: string;
+  marginRight?: number;
+  marginLeft?: number;
+  marginHorizontal?: number
 };
 
-const Spacer: React.FC<SpacerProps> = ({width, height, color}) => {
+const Spacer: React.FC<SpacerProps> = (props: SpacerProps) => {
   const style = {
-    width: width,
-    height: height ?? 1,
-    backgroundColor: color,
+    width: props.width,
+    height: props.height ?? 1,
+    backgroundColor: props.color,
+    ...props
   };
 
   return <View style={style}></View>;

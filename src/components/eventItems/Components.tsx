@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   locationText: {
     fontSize: 12,
     fontFamily: Font.medium,
+    flexShrink: 1,
     color: '#7A7A7A',
   },
   dateText: {
@@ -44,38 +45,70 @@ const SmallDot: React.FC<any> = ({size, color, spacing}) => {
   );
 };
 
-const LocationLayout: React.FC<any> = ({city, venue}) => {
+const LocationLayout: React.FC<any> = ({city, venue, fontSize}) => {
   return (
     <View
       style={{
         flexDirection: 'row',
         alignItems: 'center',
       }}>
-      <Text style={styles.locationText}>{city}</Text>
+      <Text
+        style={{
+          ...styles.locationText,
+          fontSize: fontSize ?? 12,
+        }}
+        numberOfLines={1}>
+        {city}
+      </Text>
 
       <SmallDot size={4} color="#D9D9D9" />
 
-      <Text style={styles.locationText}>{venue}</Text>
+      <Text
+        style={{
+          ...styles.locationText,
+          fontSize: fontSize ?? 12,
+        }}
+        numberOfLines={1}>
+        {venue}
+      </Text>
     </View>
   );
 };
 
-const DateLayout: React.FC<any> = ({day, month, time}) => {
+const DateLayout: React.FC<any> = ({day, month, time, fontSize}) => {
   return (
     <View
       style={{
         flexDirection: 'row',
         alignItems: 'center',
       }}>
-      <Text style={styles.dateText}>{day}</Text>
+      <Text
+        style={{
+          ...styles.dateText,
+          fontSize: fontSize ?? 11,
+        }}>
+        {day}
+      </Text>
 
       <SmallDot size={2} color="#95C1F2" spacing={4} />
 
-      <Text style={styles.dateText}>{month}</Text>
+      <Text
+        style={{
+          ...styles.dateText,
+          fontSize: fontSize ?? 11,
+        }}>
+        {month}
+      </Text>
 
       <SmallDot size={2} color="#95C1F2" spacing={4} />
 
-      <Text style={styles.dateText}>{time}</Text>
+      <Text
+        style={{
+          ...styles.dateText,
+          fontSize: fontSize ?? 11,
+        }}>
+        {time}
+      </Text>
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View, StatusBar} from 'react-native';
 import {Colors} from '../styles/Theme';
 import Logo from '../assets/svgs/LogoLarge.svg';
 import {useNavigation, StackActions} from '@react-navigation/native';
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 });
 
 const SplashScreen = () => {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation();
 
   const navigationEffect = useEffect(() => {
     setTimeout(() => navigation.dispatch(StackActions.replace('Home')), 4000);

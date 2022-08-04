@@ -1,11 +1,15 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Colors, Sizes, Shadows} from '../styles/Theme';
 import Logo from '../assets/svgs/Logo.svg';
 import LocationButton from './LocationButton';
 
+export type Props = {
+  location: string
+  onSelectLocation?: () => void;
+};
 
-const AppBar = () => {
+const AppBar: React.FC<Props> = ({location, onSelectLocation}) => {
   const styles = StyleSheet.create({
     appBar: {
       width: '100%',
@@ -23,7 +27,7 @@ const AppBar = () => {
   return (
     <View style={styles.appBar}>
       <Logo height={150} fill={Colors.primary} />
-      <LocationButton location='NY'/>
+      <LocationButton location={location} onPress={onSelectLocation}/>
     </View>
   );
 };
