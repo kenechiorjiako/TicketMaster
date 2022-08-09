@@ -29,6 +29,9 @@ import {
 import axios from 'axios';
 import { StackParamList } from '../navigation/StackNav';
 import { StackScreenProps } from '@react-navigation/stack';
+import {setLocation} from '../redux/features/location/locationSlice'
+import {clearEvents, addEvents} from '../redux/features/events/eventsSlice';
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
 enum SectionType {
   Search,
@@ -57,8 +60,15 @@ const SECTIONS = [
 type Props = StackScreenProps<StackParamList, 'Home'>;
 
 const HomeScreen = ({navigation}: Props) => {
+  const dispatch = useAppDispatch()
+
   const [showLocationSelector, setShowLocationSelector] = useState(false);
-  const [location, setLocation] = useState(statesList[0]);
+  const location = useAppSelector(state => {
+    return state.location.value;
+  });
+  const events = useAppSelector(state => {
+    return state.events.value;
+  })
   const [sections, setSections] = useState(SECTIONS);
 
   const [pageLoading, setPageLoading] = useState(false);
@@ -457,7 +467,8 @@ const HomeScreen = ({navigation}: Props) => {
               });
             }}
             onSave={(location: any) => {
-              setLocation(location);
+              // setLocation(location);
+              dispatch(setLocation(location))
             }}
             currentLocation={location}
           />
