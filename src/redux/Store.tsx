@@ -6,7 +6,7 @@ import logger from 'redux-logger';
 export const store = configureStore({
   reducer: {
     location: locationReducer,
-    events: eventsReducer
+    upcomingEvents: eventsReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 });

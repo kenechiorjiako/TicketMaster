@@ -1,4 +1,3 @@
-import {useNavigation, useRoute} from '@react-navigation/native';
 import { StackScreenProps } from '@react-navigation/stack';
 import React, {useEffect, useState} from 'react';
 import {

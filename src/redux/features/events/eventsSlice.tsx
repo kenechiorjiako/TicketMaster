@@ -1,19 +1,21 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-
 export const EventsSlice = createSlice({
-  name: 'events',
+  name: 'upcomingEvents',
   initialState: {value: [] as any},
   reducers: {
-    clearEvents: state => {
+    clearUpcomingEvents: state => {
       state.value = [];
     },
-    addEvents: (state, action) => {
-      state.value.push(action.payload);
+    setUpcomingEvents: (state, action) => {
+      state.value = action.payload;
+    },
+    addUpcomingEvents: (state, action) => {
+      state.value = state.value.concat(action.payload)
     },
   },
 });
 
-export const {clearEvents, addEvents} = EventsSlice.actions
+export const {clearUpcomingEvents, setUpcomingEvents, addUpcomingEvents} = EventsSlice.actions;
 
-export default EventsSlice.reducer
+export default EventsSlice.reducer;

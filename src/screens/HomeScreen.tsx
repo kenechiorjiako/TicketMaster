@@ -30,7 +30,7 @@ import axios from 'axios';
 import { StackParamList } from '../navigation/StackNav';
 import { StackScreenProps } from '@react-navigation/stack';
 import {setLocation} from '../redux/features/location/locationSlice'
-import {clearEvents, addEvents} from '../redux/features/events/eventsSlice';
+import {setUpcomingEvents, addUpcomingEvents} from '../redux/features/events/eventsSlice';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
 enum SectionType {
@@ -66,9 +66,9 @@ const HomeScreen = ({navigation}: Props) => {
   const location = useAppSelector(state => {
     return state.location.value;
   });
-  const events = useAppSelector(state => {
-    return state.events.value;
-  })
+  const upcomingEvents = useAppSelector(state => {
+    return state.upcomingEvents.value;
+  });
   const [sections, setSections] = useState(SECTIONS);
 
   const [pageLoading, setPageLoading] = useState(false);
@@ -130,27 +130,30 @@ const HomeScreen = ({navigation}: Props) => {
               : [],
           };
 
-          const upcomingEventsSection = {
-            title: sections[2].title,
-            type: sections[2].type,
-            data: upcomingData
-              ? upcomingData.map((e: any) => {
-                  return mapResponseToEventItemProp(e).data;
-                })
-              : [],
-          };
+          setSections([sections[0], featuredEventsSection, sections[2]]);
 
-
-          setSections([
-            sections[0],
-            featuredEventsSection,
-            upcomingEventsSection,
-          ]);
+          dispatch(setUpcomingEvents(
+            upcomingData.map((e: any) => {
+              return mapResponseToEventItemProp(e).data;
+            }),
+          ))
+          
         }),
       )
       .catch(error => {
         setRefreshing(false);
       });
+
+      try {
+        const data = await axios.all([
+          getFeaturedEvents(location.abbreviation),
+          getUpcomingEvents(location.abbreviation, 0),
+        ]);
+      } catch(e) {
+
+      }
+
+      console.log(data)
   }
 
   async function loadMore() {
@@ -159,6 +162,7 @@ const HomeScreen = ({navigation}: Props) => {
   }
 
   const loadPageEffect = useEffect(() => {
+    setLocation(statesList[2]);
 
     async function loadInitial() {
       setPageLoading(true);
@@ -192,21 +196,18 @@ const HomeScreen = ({navigation}: Props) => {
               }) : []),
             };
 
-            const upcomingEventsSection = {
-              title: sections[2].title,
-              type: sections[2].type,
-              data: upcomingData
-                ? upcomingData.map((e: any) => {
-                    return mapResponseToEventItemProp(e).data;
-                  })
-                : [],
-            };
-
             setSections([
               sections[0],
               featuredEventsSection,
-              upcomingEventsSection,
+              sections[2],
             ]);
+
+            dispatch(setUpcomingEvents(
+              upcomingData.map((e: any) => {
+                return mapResponseToEventItemProp(e).data;
+              }),
+            ))
+
             setPageLoading(false);
           }),
         )
@@ -227,17 +228,11 @@ const HomeScreen = ({navigation}: Props) => {
         .then(response => {
           const responseData = response.data?._embedded?.events;
 
-          const upcomingEventsSection = {
-            title: sections[2].title,
-            type: sections[2].type,
-            data: [
-              ...sections[2].data,
-              ...(responseData ? responseData.map((e: any) => {
-                return mapResponseToEventItemProp(e).data;
-              }) : []),
-            ],
-          };
-          setSections([sections[0], sections[1], upcomingEventsSection]);
+          dispatch(addUpcomingEvents(
+            responseData.map((e: any) => {
+              return mapResponseToEventItemProp(e).data;
+            }),
+          ))
 
           setLoadingMore(false);
         })
@@ -251,6 +246,16 @@ const HomeScreen = ({navigation}: Props) => {
       loadMore();
     }
   }, [page, shouldLoadMore]);
+
+  const onUpcomingEventsChange = useEffect(() => {
+    const upcomingEventsSection = {
+      title: sections[2].title,
+      type: sections[2].type,
+      data: upcomingEvents,
+    };
+
+    setSections([sections[0], sections[1], upcomingEventsSection]);
+  }, [upcomingEvents]);
 
   return (
     <SafeAreaView style={styles.screen}>
